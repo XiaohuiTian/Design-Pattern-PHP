@@ -108,3 +108,17 @@ echo empty($t2),"=t2 = true\n";
 echo "\n\n\n","php获取当月的最后一天。";
 
 echo date("Y-m-d H:i:s",strtotime(date("Y-m")."-01"." +1 month -1 day"));
+
+echo "\n\n\n","迭代器模式！\n";
+$aggregate = new \IMooc\Iterator\ConcreteAggregate();
+$aggregate->list[] = "测试1";
+$aggregate->list[] = "测试2";
+$aggregate->list[] = "测试3";
+$aggregate->list[] = "测试4";
+$aggregate->list[] = "测试5";
+
+$iterator = new \IMooc\Iterator\ConcreteIterator($aggregate);
+while($iterator->isDone()){
+
+	echo $iterator->next(),"\n";
+}
