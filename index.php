@@ -104,3 +104,7 @@ echo isset($t2),"=t2 = false\n";
 
 echo empty($t1),"=t1 = true\n";
 echo empty($t2),"=t2 = true\n";
+
+echo "\n\n\n","php获取当月的最后一天。";
+
+echo date("Y-m-d H:i:s",strtotime(date("Y-m")."-01"." +1 month -1 day"));
