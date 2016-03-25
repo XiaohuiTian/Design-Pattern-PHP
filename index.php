@@ -92,3 +92,15 @@ echo "\n";
 
 $decorator2 = new \IMooc\Decorator\Concrete2Decortor($decorator1);
 $decorator2->operate();
+
+echo "\n\n\n";
+
+echo "isset判断一个变量是否设置，如果一个变量被设置为null，isset返回false；empty判断一个变量是否为空，0和null都会是empty函数返回true。";
+$t1 = 0;
+$t2 = null;
+
+echo isset($t1),"=t1 = true\n";
+echo isset($t2),"=t2 = false\n";
+
+echo empty($t1),"=t1 = true\n";
+echo empty($t2),"=t2 = true\n";
